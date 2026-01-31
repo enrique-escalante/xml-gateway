@@ -45,10 +45,16 @@ WSDL: http://localhost:8080/ws/xmlservice.wsdl
 Namespace: http://example.com/xmlservice
 
 Request Example
-xml
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-  <soap:Body>
-    <tns:doAction >
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope 
+    xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:tns="http://example.com/xmlservice">
+
+    <soapenv:Header/>
+
+    <soapenv:Body>
+        <tns:doAction >
             <tns:user>Enrique</tns:user>
             <tns:type>account</tns:type>
             <tns:action>CREATE</tns:action>
@@ -73,8 +79,9 @@ xml
                 </tns:param>
             </tns:inputParams>
         </tns:doAction>
-  </soap:Body>
-</soap:Envelope>
+    </soapenv:Body>
+</soapenv:Envelope>
+
 
 
 Response Example
