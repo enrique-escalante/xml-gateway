@@ -11,16 +11,33 @@ import reactor.core.publisher.Mono;
 
 import java.util.Map;
 
+
+/**
+ * REST client service for making HTTP requests using WebClient.
+ * Handles external API calls with error handling.
+ */
 @Service
 public class RestInvocation {
 
+    /**
+     * WebClient instance for reactive HTTP requests.
+     */
     private final WebClient webClient;
 
+    /**
+     * Creates a default WebClient instance.
+     */
     public RestInvocation() {
         this.webClient = WebClient.builder().build();
     }
 
-
+    /**
+     * Executes HTTP request with provided parameters.
+     * Handles HTTP errors and returns appropriate response.
+     *
+     * @param uriParams HTTP request parameters (URL, method, headers, body)
+     * @return ResponseEntity with HTTP status and response body
+     */
     public ResponseEntity<String> webfluxRequest(HttpRequestParams uriParams) {
 
         String url = uriParams.getSistema();

@@ -12,32 +12,32 @@ import java.util.HashMap;
 @AllArgsConstructor
 public class HttpRequestParams {
     /**
-     * Nombre del sistema a consultar en la tabla LUNA_PROVISION_URLS
+     * Sistem/Endpoint
      */
     private String sistema = "";
 
     /**
-     * Parámetros de la uri
+     * Parámeters of the uri
      */
     private String uriParams = "";
 
     /**
-     * Método HTTP
+     * Method HTTP
      */
     private HttpMethod requestMethod = HttpMethod.GET;
 
     /**
-     * Headers de la petición
+     * Headers
      */
     private HashMap<String,String> headers = new HashMap<>();
 
     /**
-     * Cuerpo de la petición
+     * body
      */
     private String postData = "";
 
     /**
-     * Clase en la que se mapea la respuesta de la petición
+     * Class to map the response,unused
      */
     private Class<? extends Object> mappedClass = String.class;
 

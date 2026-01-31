@@ -15,11 +15,23 @@ import java.util.stream.Collectors;
 
 import static java.util.Map.entry;
 
+/**
+ * Account service implementation for account-related operations.
+ * Handles account data processing and transformation.
+ */
 @Service("account")
 @RequiredArgsConstructor
 public class AccountService implements TypeService{
 
+    /**
+     * REST client for external API calls.
+     */
     private final RestInvocation restInvocation;
+
+    /**
+     * Maps internal field names to external API field names.
+     * Used for request parameter transformation.
+     */
     private static final Map<String, String> nameConversionMap = Map.ofEntries(
             entry("id", "accountId"),
             entry("name","fullName"),
@@ -29,6 +41,14 @@ public class AccountService implements TypeService{
             entry("balance", "accountBalance"),
             entry("restrictions", "accountLimit")
     );
+
+
+    /**
+     * Executes account operation with transformed parameters.
+     *
+     * @param requestDTO Account request with parameters
+     * @return Account operation response
+     */
     @Override
     public ResponseDTO execute(RequestDTO requestDTO) throws JsonProcessingException {
         String action = requestDTO.getAction().toUpperCase();
@@ -78,6 +98,15 @@ public class AccountService implements TypeService{
         return new ResponseDTO("200","Configuration OK.");
     }
 
+
+    /**
+     * Converts input parameters using name mapping and adds user field.
+     * Transforms map to JSON string.
+     *
+     * @param inputParams Original parameter map
+     * @param user Username to add to parameters
+     * @return JSON string with transformed parameters
+     */
     private String conversionJson(Map<String, String> inputParams, String user) throws JsonProcessingException {
 
         Map<String, String> inputParamsCorrect = inputParams.entrySet().stream()
