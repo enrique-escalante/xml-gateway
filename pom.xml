@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.enrique</groupId>
-	<artifactId>xmlGateway</artifactId>
+	<artifactId>xml-gateway</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
-	<name>XmlGateway</name>
-	<description>Gateway via SOAP to filter rest api operations or simulate</description>
+	<name>Xml Gateway</name>
+	<description>Gateway via SOAP to filter REST API operations or simulate responses</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -115,7 +115,7 @@
 							<wsdlUrls>
 								<wsdlUrl>${project.basedir}/src/main/wsdl/XmlService.wsdl</wsdlUrl>
 							</wsdlUrls>
-							<packageName>com.example.xmlservice</packageName>
+							<packageName>com.enrique.xmlservice</packageName>
 							<sourceDestDir>${project.basedir}/src/main/java/</sourceDestDir>
 							<keep>true</keep>
 							<extension>true</extension>
