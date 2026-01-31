@@ -34,6 +34,7 @@ public class AccountService implements TypeService{
     public ResponseDTO execute(RequestDTO requestDTO) throws JsonProcessingException {
         String action = requestDTO.getAction().toUpperCase();
         String name = requestDTO.getName().toLowerCase();
+        String user = requestDTO.getUser();
         Map<String, String> inputParams = requestDTO.getParameters();
 
         String endpoint = "";
@@ -51,7 +52,7 @@ public class AccountService implements TypeService{
                 endpoint = "/account/"+name+"/new";
                 httpRequestParams.setSistema(endpoint);
                 httpRequestParams.setRequestMethod(HttpMethod.POST);
-                httpRequestParams.setPostData(conversionJson(inputParams));
+                httpRequestParams.setPostData(conversionJson(inputParams,user));
                 restInvocation.webfluxRequest(httpRequestParams);
                 break;
             case "DELETE":
@@ -64,21 +65,21 @@ public class AccountService implements TypeService{
                 endpoint = "/account/{accountId}/"+name;
                 httpRequestParams.setSistema(endpoint);
                 httpRequestParams.setRequestMethod(HttpMethod.PUT);
-                httpRequestParams.setPostData(conversionJson(inputParams));
+                httpRequestParams.setPostData(conversionJson(inputParams,user));
                 restInvocation.webfluxRequest(httpRequestParams);
                 break;
             case "UPDATE":
                 endpoint = "/account/{accountId}/"+name;
                 httpRequestParams.setSistema(endpoint);
                 httpRequestParams.setRequestMethod(HttpMethod.PATCH);
-                httpRequestParams.setPostData(conversionJson(inputParams));
+                httpRequestParams.setPostData(conversionJson(inputParams, user));
                 restInvocation.webfluxRequest(httpRequestParams);
                 break;
         }
         return new ResponseDTO("200","Configuration OK.");
     }
 
-    private String conversionJson(Map<String, String> inputParams) throws JsonProcessingException {
+    private String conversionJson(Map<String, String> inputParams, String user) throws JsonProcessingException {
 
         Map<String, String> inputParamsCorrect = inputParams.entrySet().stream()
                 .collect(Collectors.toMap(
@@ -86,7 +87,7 @@ public class AccountService implements TypeService{
                         Map.Entry::getValue
                 ));
         ObjectMapper objectMapper = new ObjectMapper();
-
+        inputParams.put("user",user);
         return objectMapper.writeValueAsString(inputParamsCorrect);
     }
 }
