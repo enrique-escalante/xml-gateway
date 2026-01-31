@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:tns="http://example.com/xmlservice"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             targetNamespace="http://example.com/xmlservice"
+             name="XmlService">
+
+    <!-- Tipos -->
+    <types>
+        <xsd:schema>
+            <xsd:import namespace="http://example.com/xmlservice" schemaLocation="xmlservice.xsd"/>
+        </xsd:schema>
+    </types>
+
+    <!-- Mensajes -->
+    <message name="doActionRequest">
+        <part name="parameters" element="tns:doAction"/>
+    </message>
+    <message name="doActionResponse">
+        <part name="parameters" element="tns:doActionResponse"/>
+    </message>
+
+    <!-- PortType -->
+    <portType name="XmlPortType">
+        <operation name="doAction">
+            <input message="tns:doActionRequest"/>
+            <output message="tns:doActionResponse"/>
+        </operation>
+    </portType>
+
+    <!-- Binding -->
+    <binding name="XmlBinding" type="tns:XmlPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="doAction">
+            <soap:operation soapAction="http://example.com/xmlservice/doAction"/>
+            <input><soap:body use="literal"/></input>
+            <output><soap:body use="literal"/></output>
+        </operation>
+    </binding>
+
+    <!-- Service -->
+    <service name="XmlService">
+        <port name="XmlPort" binding="tns:XmlBinding">
+            <soap:address location="http://localhost:8080/xmlservice"/>
+        </port>
+    </service>
+</definitions>

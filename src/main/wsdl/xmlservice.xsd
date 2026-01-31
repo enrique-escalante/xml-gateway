@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/xmlservice"
+           xmlns:tns="http://example.com/xmlservice"
+           elementFormDefault="qualified">
+
+    <!-- Tipo para parámetros dinámicos -->
+    <xs:complexType name="params">
+        <xs:sequence>
+            <xs:element name="param" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="name" type="xs:string"/>
+                        <xs:element name="value" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Request -->
+    <xs:complexType name="xmlRequest">
+        <xs:sequence>
+            <xs:element name="user" type="xs:string"/>
+            <xs:element name="type" type="xs:string"/>
+            <xs:element name="action" type="xs:string"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="inputParams" type="tns:params" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Response -->
+    <xs:complexType name="xmlResponse">
+        <xs:sequence>
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="result" type="xs:string"/>
+            <xs:element name="date" type="xs:date"/>
+            <xs:element name="time" type="xs:time"/>
+            <xs:element name="outputParams" type="tns:params" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Elementos raíz -->
+    <xs:element name="doAction" type="tns:xmlRequest"/>
+    <xs:element name="doActionResponse" type="tns:xmlResponse"/>
+
+</xs:schema>
