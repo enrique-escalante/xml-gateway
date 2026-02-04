@@ -38,8 +38,8 @@ public interface XmlPortType {
      * @param user
      */
     @WebMethod(action = "http://example.com/xmlservice/doAction")
-    @RequestWrapper(localName = "doAction", targetNamespace = "http://example.com/xmlservice", className = "com.example.xmlservice.XmlRequest")
-    @ResponseWrapper(localName = "doActionResponse", targetNamespace = "http://example.com/xmlservice", className = "com.example.xmlservice.XmlResponse")
+    @RequestWrapper(localName = "doAction", targetNamespace = "http://example.com/xmlservice", className = "com.enrique.xmlservice.XmlRequest")
+    @ResponseWrapper(localName = "doActionResponse", targetNamespace = "http://example.com/xmlservice", className = "com.enrique.xmlservice.XmlResponse")
     public void doAction(
         @WebParam(name = "user", targetNamespace = "http://example.com/xmlservice")
         String user,

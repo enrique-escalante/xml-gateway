@@ -54,6 +54,7 @@ public class GatewayEndpoint {
 
         XmlResponse response = mainProcessorService.processRequest(request);
         //TODO method to translate new codes to legacy/soap codes
+        //TODO Soap interceptor to know exactly what is sent
         //Mock response
         response.setCode("0");
         response.setResult("Configuration OK");

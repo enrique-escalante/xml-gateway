@@ -60,12 +60,12 @@ public class RestInvocation {
                     .block();
 
         } catch (WebClientResponseException ex) {
-            // En caso de un error HTTP, capturamos el código de estado y el cuerpo de error
+            // Http Error
             responseEntity = ResponseEntity
                     .status(ex.getRawStatusCode())
                     .body(ex.getResponseBodyAsString());
         } catch (Exception e) {
-            // En caso de un error inesperado
+            // Unexpected Error
             responseEntity = ResponseEntity
                     .status(500)
                     .body("Error inesperado: " + e.getMessage());

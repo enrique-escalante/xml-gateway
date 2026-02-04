@@ -4,9 +4,12 @@ import com.enrique.xmlgateway.model.dto.HttpRequestParams;
 import com.enrique.xmlgateway.model.dto.RequestDTO;
 import com.enrique.xmlgateway.model.dto.ResponseDTO;
 import com.enrique.xmlgateway.client.RestInvocation;
+import com.enrique.xmlgateway.service.MainProcessorService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +25,9 @@ import static java.util.Map.entry;
 @Service("account")
 @RequiredArgsConstructor
 public class AccountService implements TypeService{
+
+    private static final Logger logger = LoggerFactory.getLogger(AccountService.class);
+
 
     /**
      * REST client for external API calls.
@@ -51,11 +57,12 @@ public class AccountService implements TypeService{
      */
     @Override
     public ResponseDTO execute(RequestDTO requestDTO) throws JsonProcessingException {
+        logger.info("Entering in AccountService");
         String action = requestDTO.getAction().toUpperCase();
         String name = requestDTO.getName().toLowerCase();
         String user = requestDTO.getUser();
         Map<String, String> inputParams = requestDTO.getParameters();
-
+        logger.info("Name: "+name+ " Action: "+action);
         String endpoint = "";
         HttpRequestParams httpRequestParams = new HttpRequestParams();
         //details, status, balance,
@@ -114,8 +121,11 @@ public class AccountService implements TypeService{
                         entry -> nameConversionMap.getOrDefault(entry.getKey(), entry.getKey()),
                         Map.Entry::getValue
                 ));
+
+
         ObjectMapper objectMapper = new ObjectMapper();
         inputParams.put("user",user);
+        logger.info("Correct params: "+inputParamsCorrect);
         return objectMapper.writeValueAsString(inputParamsCorrect);
     }
 }

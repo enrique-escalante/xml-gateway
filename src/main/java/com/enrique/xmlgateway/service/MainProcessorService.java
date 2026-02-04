@@ -6,6 +6,8 @@ import com.enrique.xmlservice.XmlRequest;
 import com.enrique.xmlservice.XmlResponse;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 
@@ -18,6 +20,8 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class MainProcessorService {
+
+    private static final Logger logger = LoggerFactory.getLogger(MainProcessorService.class);
 
     /**
      * Router service responsible for delegating requests to appropriate
@@ -35,7 +39,7 @@ public class MainProcessorService {
      * @throws JsonProcessingException If JSON serialization/deserialization fails
      */
     public XmlResponse processRequest(XmlRequest xmlRequest) throws JsonProcessingException {
-
+        logger.info("Executing the main service");
         RequestDTO requestDTO = extractAndValidateRequest(xmlRequest);
         XmlResponse xmlResponse = new XmlResponse();
         //TODO Loop FILE TO check if is a simulated service or not

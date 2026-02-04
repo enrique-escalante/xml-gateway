@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %black(%d{ISO8601}) %highlight(%-5level) [%blue(%t)] %yellow(%C{1}):
+                %msg%n%throwable
+            </Pattern>
+        </layout>
+    </appender>
+
+    <appender name="SIFT" class="ch.qos.logback.classic.sift.SiftingAppender">
+        <discriminator>
+            <key>requestId</key>
+            <defaultValue>logs/default_log</defaultValue>
+        </discriminator>
+        <sift>
+            <appender name="FILE-${requestId}" class="ch.qos.logback.core.FileAppender">
+                <file>${requestId}.log</file>
+                <append>true</append>
+                <layout class="ch.qos.logback.classic.PatternLayout">
+                    <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level%msg%n</pattern>
+                </layout>
+                <filter class="ch.qos.logback.classic.filter.LevelFilter">
+                    <level>WARN</level>
+                    <onMatch>DENY</onMatch>
+                    <onMismatch>ACCEPT</onMismatch>
+                </filter>
+            </appender>
+        </sift>
+    </appender>
+    <logger name="org.hibernate.SQL" level="ERROR"/>
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="ERROR"/>
+    <!-- LOG everything at INFO level -->
+    <root level="INFO">
+        <appender-ref ref="SIFT" />
+        <!--<appender-ref ref="Console" />-->
+    </root>
+
+</configuration>

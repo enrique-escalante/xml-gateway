@@ -1,0 +1,133 @@
+2026-02-04 20:46:09 INFO Starting XmlGatewayApplication using Java 11.0.29 on DESKTOP-BBLJEST with PID 11968 (C:\git-enrique\xml-gateway\target\classes started by Enriq in C:\git-enrique\xml-gateway)
+2026-02-04 20:46:09 DEBUGRunning with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-04 20:46:09 INFO No active profile set, falling back to 1 default profile: "default"
+2026-02-04 20:46:09 INFO The Class-Path manifest attribute in C:\Users\Enriq\.m2\repository\org\glassfish\ha\ha-api\3.1.9\ha-api-3.1.9.jar referenced one or more files that do not exist: file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/hk2-core.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/class-model.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/config.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/auto-depends.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/javax.inject.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/asm-all-repackaged.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/hk2-api.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/osgi-resource-locator.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/tiger-types.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/bean-validator.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/jtype.jar
+2026-02-04 20:46:09 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-04 20:46:09 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-04 20:46:10 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-04 20:46:10 INFO Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2026-02-04 20:46:10 INFO Bean 'webServiceConfig' of type [com.enrique.xmlgateway.config.WebServiceConfig$$EnhancerBySpringCGLIB$$3d800d10] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-04 20:46:10 INFO Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$be2e5422] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-04 20:46:10 INFO Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-02-04 20:46:11 INFO Tomcat initialized with port(s): 8080 (http)
+2026-02-04 20:46:11 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-04 20:46:11 INFO Starting service [Tomcat]
+2026-02-04 20:46:11 INFO Starting Servlet engine: [Apache Tomcat/9.0.83]
+2026-02-04 20:46:11 INFO Initializing Spring embedded WebApplicationContext
+2026-02-04 20:46:11 INFO Root WebApplicationContext: initialization completed in 2124 ms
+2026-02-04 20:46:11 INFO HikariPool-1 - Starting...
+2026-02-04 20:46:12 INFO HikariPool-1 - Start completed.
+2026-02-04 20:46:12 INFO H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:a4903965-4a9b-4875-b459-9befe22bbf6a'
+2026-02-04 20:46:12 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-04 20:46:12 INFO HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-04 20:46:12 INFO HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-04 20:46:12 INFO HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2026-02-04 20:46:13 INFO HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-04 20:46:13 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-04 20:46:18 DEBUGControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-04 20:46:18 DEBUG2 mappings in 'requestMappingHandlerMapping'
+2026-02-04 20:46:18 DEBUGPatterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-02-04 20:46:18 DEBUGControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-04 20:46:18 INFO LiveReload server is running on port 35729
+2026-02-04 20:46:18 INFO Starting ProtocolHandler ["http-nio-8080"]
+2026-02-04 20:46:18 INFO Tomcat started on port(s): 8080 (http) with context path ''
+2026-02-04 20:46:18 INFO Started XmlGatewayApplication in 9.867 seconds (JVM running for 10.703)
+2026-02-04 20:46:22 INFO Initializing Spring MessageDispatcherServlet 'messageDispatcherServlet'
+2026-02-04 20:46:22 INFO Initializing Servlet 'messageDispatcherServlet'
+2026-02-04 20:46:22 INFO Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2026-02-04 20:46:22 INFO Completed initialization in 28 ms
+2026-02-04 20:46:25 INFO Executing the main service
+2026-02-04 20:46:25 DEBUG[7c3b81f7] HTTP POST /account/details/new
+2026-02-04 20:48:44 INFO Starting XmlGatewayApplication using Java 11.0.29 on DESKTOP-BBLJEST with PID 26436 (C:\git-enrique\xml-gateway\target\classes started by Enriq in C:\git-enrique\xml-gateway)
+2026-02-04 20:48:44 DEBUGRunning with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-04 20:48:44 INFO No active profile set, falling back to 1 default profile: "default"
+2026-02-04 20:48:44 INFO The Class-Path manifest attribute in C:\Users\Enriq\.m2\repository\org\glassfish\ha\ha-api\3.1.9\ha-api-3.1.9.jar referenced one or more files that do not exist: file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/hk2-core.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/class-model.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/config.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/auto-depends.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/javax.inject.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/asm-all-repackaged.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/hk2-api.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/osgi-resource-locator.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/tiger-types.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/bean-validator.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/jtype.jar
+2026-02-04 20:48:44 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-04 20:48:44 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-04 20:48:45 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-04 20:48:45 INFO Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2026-02-04 20:48:45 INFO Bean 'webServiceConfig' of type [com.enrique.xmlgateway.config.WebServiceConfig$$EnhancerBySpringCGLIB$$53f7a968] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-04 20:48:45 INFO Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$d4a5f07a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-04 20:48:45 INFO Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-02-04 20:48:46 INFO Tomcat initialized with port(s): 8080 (http)
+2026-02-04 20:48:46 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-04 20:48:46 INFO Starting service [Tomcat]
+2026-02-04 20:48:46 INFO Starting Servlet engine: [Apache Tomcat/9.0.83]
+2026-02-04 20:48:46 INFO Initializing Spring embedded WebApplicationContext
+2026-02-04 20:48:46 INFO Root WebApplicationContext: initialization completed in 2008 ms
+2026-02-04 20:48:46 INFO HikariPool-1 - Starting...
+2026-02-04 20:48:47 INFO HikariPool-1 - Start completed.
+2026-02-04 20:48:47 INFO H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:966f23f4-f40b-41a2-98f5-efbfba3d6975'
+2026-02-04 20:48:47 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-04 20:48:47 INFO HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-04 20:48:47 INFO HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-04 20:48:47 INFO HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2026-02-04 20:48:48 INFO HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-04 20:48:48 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-04 20:48:48 DEBUGControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-04 20:48:48 DEBUG2 mappings in 'requestMappingHandlerMapping'
+2026-02-04 20:48:48 DEBUGPatterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-02-04 20:48:48 DEBUGControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-04 20:48:49 INFO LiveReload server is running on port 35729
+2026-02-04 20:48:49 INFO Starting ProtocolHandler ["http-nio-8080"]
+2026-02-04 20:48:49 INFO Tomcat started on port(s): 8080 (http) with context path ''
+2026-02-04 20:48:49 INFO Started XmlGatewayApplication in 5.159 seconds (JVM running for 5.962)
+2026-02-04 20:49:12 INFO Initializing Spring MessageDispatcherServlet 'messageDispatcherServlet'
+2026-02-04 20:49:12 INFO Initializing Servlet 'messageDispatcherServlet'
+2026-02-04 20:49:12 INFO Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2026-02-04 20:49:12 INFO Completed initialization in 26 ms
+2026-02-04 20:49:14 INFO Executing the main service
+2026-02-04 20:49:14 INFO Entering in AccountService
+2026-02-04 20:49:14 INFO Request: com.enrique.xmlgateway.model.dto.RequestDTO@3b3cd41c
+2026-02-04 20:49:14 DEBUG[6680c378] HTTP POST /account/details/new
+2026-02-04 20:51:46 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-04 20:51:46 INFO HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2026-02-04 20:51:46 INFO HikariPool-1 - Shutdown initiated...
+2026-02-04 20:51:46 INFO HikariPool-1 - Shutdown completed.
+2026-02-04 20:52:16 INFO Starting XmlGatewayApplication using Java 11.0.29 on DESKTOP-BBLJEST with PID 7832 (C:\git-enrique\xml-gateway\target\classes started by Enriq in C:\git-enrique\xml-gateway)
+2026-02-04 20:52:16 DEBUGRunning with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-04 20:52:16 INFO No active profile set, falling back to 1 default profile: "default"
+2026-02-04 20:52:16 INFO The Class-Path manifest attribute in C:\Users\Enriq\.m2\repository\org\glassfish\ha\ha-api\3.1.9\ha-api-3.1.9.jar referenced one or more files that do not exist: file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/hk2-core.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/class-model.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/config.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/auto-depends.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/javax.inject.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/asm-all-repackaged.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/hk2-api.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/osgi-resource-locator.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/tiger-types.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/bean-validator.jar,file:/C:/Users/Enriq/.m2/repository/org/glassfish/ha/ha-api/3.1.9/jtype.jar
+2026-02-04 20:52:16 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-04 20:52:16 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-04 20:52:17 INFO Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-04 20:52:17 INFO Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2026-02-04 20:52:17 INFO Bean 'webServiceConfig' of type [com.enrique.xmlgateway.config.WebServiceConfig$$EnhancerBySpringCGLIB$$596215a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-04 20:52:17 INFO Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$da105cb6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-04 20:52:17 INFO Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-02-04 20:52:18 INFO Tomcat initialized with port(s): 8080 (http)
+2026-02-04 20:52:18 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-04 20:52:18 INFO Starting service [Tomcat]
+2026-02-04 20:52:18 INFO Starting Servlet engine: [Apache Tomcat/9.0.83]
+2026-02-04 20:52:18 INFO Initializing Spring embedded WebApplicationContext
+2026-02-04 20:52:18 INFO Root WebApplicationContext: initialization completed in 2261 ms
+2026-02-04 20:52:18 INFO HikariPool-1 - Starting...
+2026-02-04 20:52:18 INFO HikariPool-1 - Start completed.
+2026-02-04 20:52:18 INFO H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:6ca59786-6046-430f-ac0d-12bc62624d47'
+2026-02-04 20:52:19 INFO HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-04 20:52:19 INFO HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-02-04 20:52:19 INFO HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-02-04 20:52:19 INFO HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2026-02-04 20:52:20 INFO HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-02-04 20:52:20 INFO Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-04 20:52:20 DEBUGControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-04 20:52:20 DEBUG2 mappings in 'requestMappingHandlerMapping'
+2026-02-04 20:52:21 DEBUGPatterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-02-04 20:52:21 DEBUGControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-04 20:52:21 INFO LiveReload server is running on port 35729
+2026-02-04 20:52:21 INFO Starting ProtocolHandler ["http-nio-8080"]
+2026-02-04 20:52:21 INFO Tomcat started on port(s): 8080 (http) with context path ''
+2026-02-04 20:52:21 INFO Started XmlGatewayApplication in 5.545 seconds (JVM running for 6.342)
+2026-02-04 20:52:21 INFO Initializing Spring MessageDispatcherServlet 'messageDispatcherServlet'
+2026-02-04 20:52:21 INFO Initializing Servlet 'messageDispatcherServlet'
+2026-02-04 20:52:21 INFO Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2026-02-04 20:52:21 INFO Completed initialization in 28 ms
+2026-02-04 20:52:24 INFO Executing the main service
+2026-02-04 20:52:24 INFO Entering in AccountService
+2026-02-04 20:52:24 INFO Name: details Action: CREATE
+2026-02-04 20:52:24 INFO Correct params: {accountId=98765, phone=667665668, fullAddress=marbella, fullName=Enrique Escalante}
+2026-02-04 20:52:24 DEBUG[6eb28e0a] HTTP POST /account/details/new
+2026-02-04 20:53:47 INFO Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-04 20:53:47 INFO HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2026-02-04 20:53:48 INFO HikariPool-1 - Shutdown initiated...
+2026-02-04 20:53:48 INFO HikariPool-1 - Shutdown completed.
