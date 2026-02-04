@@ -39,7 +39,7 @@ public class MainProcessorService {
         RequestDTO requestDTO = extractAndValidateRequest(xmlRequest);
         XmlResponse xmlResponse = new XmlResponse();
         //TODO Loop FILE TO check if is a simulated service or not
-        //TODO Loop FILE to check if the workflow goes to the new restful services or an old client.(only usefull to open and close services during the total migration)
+        //TODO Loop FILE to check if the workflow goes to the new restful services or to an old client.(only usefull to open and close services during the migration)
         //TODO That FILE could be in DB, MACHINE or VM.
         if(requestDTO!= null) {
             ResponseDTO responseDTO = serviceRouter.router(requestDTO);
